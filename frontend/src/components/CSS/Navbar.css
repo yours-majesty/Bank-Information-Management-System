@@ -1,0 +1,86 @@
+
+
+.navbar {
+   
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+    padding: 1rem 1rem;
+    background-color: #6d28d9; /* Navbar background color */
+    color: white; /* Text color */
+    position: sticky;
+    top: 0; /* This makes the navbar stick to the top */
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+  }
+  
+  .nav-logo p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .nav-menu hr{
+    border:none;
+    width:80%;
+    height:3px;
+    border-radius:10px;
+    background-color: white;
+}
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    margin-right: 10px;
+  }
+  
+  .nav-menu li {
+    cursor: pointer;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover,
+  .nav-menu .active {
+    color: #FFD700; /* Active or hover color */
+  }
+  
+  .nav-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .logout-btn,
+  .login-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .logout-btn {
+    background-color: #E74C3C; /* Logout button color */
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-btn:hover {
+    background-color: #C0392B; /* Darker shade on hover */
+  }
+  
+  .login-btn {
+    background-color: #3498DB; /* Login button color */
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .login-btn:hover {
+    background-color: #2980B9; /* Darker shade on hover */
+  }
+  

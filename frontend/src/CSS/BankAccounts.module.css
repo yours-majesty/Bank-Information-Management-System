@@ -1,0 +1,132 @@
+/* BankAccounts.module.css */
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  
+}
+
+.accountHolder {
+    font-weight: bold;
+    color: green;
+}
+
+.bankName {
+    color: #888;
+}
+.userDetails{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.accountNumber {
+    color: #666;
+}
+.IFSCCode{
+    color: red;
+}
+.loading {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+.Buttons{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    
+}
+
+.button1{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.beforeUpdate{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+.beforeUpdate input{
+height: 30px;
+width: 80%;
+padding: 5px;
+}
+.button2{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.updateButtons{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+.updateButton1{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+.updateButton2{
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: 800;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.errorMessage {
+    color: red;
+    text-align: center;
+}

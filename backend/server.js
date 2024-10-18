@@ -4,7 +4,7 @@ require('dotenv').config();
 const userRoutes = require('./routes/userRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const cors =require('cors');
-
+const addBankRoutes = require('./routes/addBankRoutes')
 const app = express();
 
 
@@ -20,6 +20,7 @@ app.use(cors());
 // using actual middlewares for setting up routes
 app.use('/api',userRoutes);
 app.use('/api/admin/',adminRoutes);
+app.use('/api',addBankRoutes);
 
 
 

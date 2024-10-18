@@ -29,7 +29,7 @@ const register = async (req, res) => {
         });
 
         // Send response
-        return res.status(201).json({
+        return res.status(200).json({
             success: true,
             message: "User successfully registered! You can log in now"
         });
@@ -82,6 +82,7 @@ const loginUser = async (req, res) => {
         // Send login success response
         return res.status(200).json({
             success: true,
+            token,
             message: "Login successful"
         });
     } catch (error) {
