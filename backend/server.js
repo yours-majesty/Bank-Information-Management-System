@@ -14,7 +14,23 @@ connectDB();
 // for parsing form data
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors());
+const allowedOrigins = ["https://bank-information-management-system-application.vercel.app","https://bank-information-management-system-admin.vercel.app"]; 
+app.use(
+    cors({
+        origin: function (origin, callback) {
+            if (
+                !origin || 
+                allowedOrigins.includes(origin)  
+            ) {
+                callback(null, true); 
+            } else {
+                callback(new Error("Not allowed by CORS")); 
+            }
+        },
+        credentials: true, 
+        optionsSuccessStatus: 200 
+    })
+);
 
 
 // using actual middlewares for setting up routes
