@@ -14,7 +14,7 @@ connectDB();
 // for parsing form data
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-const allowedOrigins = ["https://bank-information-management-system-application.vercel.app","https://bank-information-management-system-admin.vercel.app","http://localhost:5173","http://localhost:5174"]; 
+const allowedOrigins = ["https://bank-information-management-system-webapp.vercel.app","https://bank-information-management-system-admin.vercel.app","http://localhost:5173","http://localhost:5174"]; 
 app.use(
     cors({
         origin: function (origin, callback) {
