@@ -1,17 +1,17 @@
-
-
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./CSS/Navbar.css"; 
+import "./CSS/Navbar.css";
 import { AuthContext } from '../context/AuthContext'; 
 
 function Navbar() {
   const [isActive, setIsActive] = useState("Dashboard");
   const navigate = useNavigate();
   const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
-
-  
   const { isLogin, logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    console.log("Navbar re-rendered with isLogin:", isLogin); // Debugging log
+  }, [isLogin]);
 
   function handleLogout() {
     logout(); 

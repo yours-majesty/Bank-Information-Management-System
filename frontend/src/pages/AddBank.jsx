@@ -3,6 +3,7 @@ import {ToastContainer,toast} from 'react-toastify';
 import {useState} from "react";
 import  styles from "../CSS/AddBank.module.css";
 
+
 function AddBank() {
 
     const [IFSCCode,setIFCCode]=useState('');
@@ -47,7 +48,9 @@ function AddBank() {
     }
 
   return (
+   
     <div>
+ 
         <div className={styles.bankContainer}>
             <div className={styles.addBankForm}>
                 <h1>Add Your Bank Details</h1>
