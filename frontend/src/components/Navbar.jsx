@@ -1,26 +1,21 @@
-import { useState, useEffect } from "react";
+
+
+import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./CSS/Navbar.css"; // Make sure to create this CSS file
+import "./CSS/Navbar.css"; 
+import { AuthContext } from '../context/AuthContext'; 
 
 function Navbar() {
   const [isActive, setIsActive] = useState("Dashboard");
-  const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
-  const frontendUrl=import.meta.env.VITE_FRONTEND_URL;
+  const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
 
-  useEffect(() => {
-    // Check for token presence in localStorage
-    const token = localStorage.getItem("token");
-    console.log("Token:", token); 
-    setIsLogin(!!token); 
-  }, []);
+  
+  const { isLogin, logout } = useContext(AuthContext);
 
   function handleLogout() {
-    localStorage.removeItem("token");
-    
-
-    setIsLogin(false);
-    navigate("/"); 
+    logout(); 
+    navigate("/");
   }
 
   return (
@@ -41,13 +36,11 @@ function Navbar() {
                 Account Details
               </Link>
             </li>
-           
-               <li onClick={() => setIsActive("Redirect to Admin Panel")}>
+            <li onClick={() => setIsActive("Redirect to Admin Panel")}>
               <Link className={isActive === "Redirect to Admin Panel" ? "active" : ""} to={`${frontendUrl}`}>
                 Redirect to Admin Panel
               </Link>
             </li>
-           
           </>
         )}
       </ul>
@@ -63,3 +56,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
