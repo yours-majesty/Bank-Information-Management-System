@@ -15,6 +15,7 @@ function App() {
       <AuthProvider> 
         
           <Navbar />
+           </AuthProvider>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/signUp" element={<SignUp />} />
@@ -23,7 +24,7 @@ function App() {
           </Routes>
        
         <ToastContainer />
-      </AuthProvider>
+     
     </>
   );
 }
