@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { Link } from "react-router-dom";
-// import "react-toastify/dist/ReactToastify.css";  // Make sure to include this
+
 import "../CSS/AdminLogin.css";
 
 function Login() {
@@ -24,7 +24,7 @@ function Login() {
       if (response.data.success) {
         const usertoken = response.data.token;
         setToken(usertoken);
-        localStorage.setItem("token", usertoken);  // Corrected localStorage usage
+        localStorage.setItem("token", usertoken);  
         toast.success("Login Successful",{
           onClose:()=>navigate('/dashboard')
         });

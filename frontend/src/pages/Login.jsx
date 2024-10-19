@@ -25,10 +25,12 @@ function Login() {
         setToken(usertoken);
         localStorage.setItem("token", usertoken);
         toast.success(response.data.message);
-        navigate('/addAccount')
+        window.location.href="/addAccount";
       }
+    
     } catch (error) {
       console.log("Error Occured", error);
+      toast.error("Internal Sever Error");
     }
   };
   useEffect(() => {
@@ -42,8 +44,10 @@ function Login() {
       <div className={styles.loginContainer}>
         <div className={styles.loginForm}>
             <h1>Login</h1>
-          <form onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <input
+            className={styles.input}
+              
               type="email"
               placeholder="Email"
               value={email}
@@ -52,6 +56,7 @@ function Login() {
             />
 
             <input
+            className={styles.input}
               type="password"
               placeholder="Password"
               value={password}
@@ -59,13 +64,14 @@ function Login() {
               required
             />
 
-            <button type="submit">Login In</button>
+            <button className={styles.button} type="submit">Login In</button>
           </form>
           <p>
-            Do not have an account?<Link to="/signUp">Sign Up</Link>
+            Do not have an account?<Link style={{color:"yellow",fontWeight:"700",fontFamily:"Poppins"}} to="/signUp">Sign Up</Link>
           </p>
         </div>
       </div>
+        
     </div>
   );
 }

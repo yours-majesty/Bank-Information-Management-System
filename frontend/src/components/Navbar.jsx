@@ -6,20 +6,21 @@ function Navbar() {
   const [isActive, setIsActive] = useState("Dashboard");
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
+  const frontendUrl=import.meta.env.VITE_FRONTEND_URL;
 
   useEffect(() => {
     // Check for token presence in localStorage
     const token = localStorage.getItem("token");
-    console.log("Token:", token); // Log the token
-    setIsLogin(!!token); // Set isLogin based on token presence
+    console.log("Token:", token); 
+    setIsLogin(!!token); 
   }, []);
 
   function handleLogout() {
     localStorage.removeItem("token");
-    localStorage.removeItem("isLogin");
-    localStorage.removeItem("username");
+    
+
     setIsLogin(false);
-    navigate("/"); // Redirect to login page
+    navigate("/"); 
   }
 
   return (
@@ -28,7 +29,7 @@ function Navbar() {
         <p>W3 Business</p>
       </div>
       <ul className="nav-menu">
-        {isLogin && ( // Show only if logged in
+        {isLogin && ( 
           <>
             <li onClick={() => setIsActive("Add Bank Account")}>
               <Link className={isActive === "Add Bank Account" ? "active" : ""} to="/addAccount">
@@ -40,6 +41,13 @@ function Navbar() {
                 Account Details
               </Link>
             </li>
+           
+               <li onClick={() => setIsActive("Redirect to Admin Panel")}>
+              <Link className={isActive === "Redirect to Admin Panel" ? "active" : ""} to={`${frontendUrl}`}>
+                Redirect to Admin Panel
+              </Link>
+            </li>
+           
           </>
         )}
       </ul>

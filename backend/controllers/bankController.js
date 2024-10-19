@@ -51,7 +51,7 @@ const getBankAccount = async(req,res)=>{
     }
 }
 const updateBankAccount = async (req, res) => {
-    const { id } = req.params; // Get the bank account ID from the request parameters
+    const { id } = req.params; 
     const { IFSCCode, branchName, bankName, accountNumber, accountHolderName } = req.body;
 
     try {
@@ -61,7 +61,7 @@ const updateBankAccount = async (req, res) => {
             bankName,
             accountNumber,
             accountHolderName,
-        }, { new: true }); // Return the updated document
+        }, { new: true }); 
 
         if (!updatedAccount) {
             return res.status(404).json({ success: false, message: "Bank account not found" });
@@ -81,8 +81,7 @@ const updateBankAccount = async (req, res) => {
 };
 
 const deleteBankAccount = async (req, res) => {
-    const { id } = req.params; // Get the bank account ID from the request parameters
-
+    const { id } = req.params; 
     try {
         const deletedAccount = await BankAccount.findByIdAndDelete(id);
 

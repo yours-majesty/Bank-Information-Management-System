@@ -10,7 +10,7 @@ const authMiddleware = (req, res, next) => {
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = { _id: decoded.userId }; // Make sure to adjust this based on how you set the token
-        console.log('Decoded Token:', decoded); // Log the decoded token for verification
+        
         next();
     } catch (error) {
         res.status(401).json({ message: 'Invalid token' });

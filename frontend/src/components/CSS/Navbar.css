@@ -1,7 +1,7 @@
 
 
 .navbar {
-   
+   font-family: "Poppins",sans-serif;
     display: flex;
     justify-content: space-between;
   align-items: center;
@@ -59,14 +59,17 @@
   .login-btn {
     padding: 0.5rem 1rem;
     border: none;
+    
+ 
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
   }
   
   .logout-btn {
-    background-color: #E74C3C; /* Logout button color */
-    color: white;
+    background-color: white; /* Logout button color */
+    font-family: "Poppins";
+    color: blueviolet;
     transition: background-color 0.3s;
   }
   
@@ -75,8 +78,9 @@
   }
   
   .login-btn {
-    background-color: #3498DB; /* Login button color */
-    color: white;
+    background-color: white; /* Login button color */
+    font-family: "Poppins";
+    color: blueviolet;
     transition: background-color 0.3s;
   }
   

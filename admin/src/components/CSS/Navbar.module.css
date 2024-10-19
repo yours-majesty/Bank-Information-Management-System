@@ -1,0 +1,36 @@
+/* Navbar.module.css */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+   color: white;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    background-color: black ;
+    padding: 10px 20px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+}
+
+.logoutButton {
+    margin-left: auto; 
+}
+
+.button {
+    background-color: #fff; 
+    color: black ;
+    border: none; 
+    border-radius: 5px; 
+    font-family: 'Poppins';
+    padding: 10px 15px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+}
+
+.button:hover {
+    background-color: #e6e6e6; 
+}

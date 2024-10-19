@@ -3,7 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'; 
-import '../CSS/AdminSignUp.css'
+import styles from'../CSS/AdminSignUp.module.css';
+import { Link } from "react-router-dom";
+
 // Import toastify CSS
 
 function SignUp() {
@@ -34,11 +36,12 @@ function SignUp() {
     };
 
     return (
-        <div className="signup-container">
-            <div className="sign-up-form">
+        <div className={styles.SignUpContainer}>
+            <div className={styles.SignUpForm}>
           <h1>Admin Sign Up</h1>
-                <form onSubmit={handleSubmit}>
+                <form className={styles.form} onSubmit={handleSubmit}>
                     <input
+                    className={styles.input}
                         type="text"
                         placeholder="Username"
                         value={username}
@@ -47,6 +50,7 @@ function SignUp() {
                     />
 
                     <input
+                    className={styles.input}
                         type="email"
                         placeholder="Email"
                         value={email}
@@ -54,14 +58,18 @@ function SignUp() {
                     />
 
                     <input
+                    className={styles.input}
                         type="password"
                         placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
 
-                    <button type="submit">Sign Up</button>
+                    <button className={styles.button} type="submit">Sign Up</button>
                 </form>
+                <p>
+          Already have an Account? <Link to="/">Login</Link>
+        </p>
                 <ToastContainer />
             </div>
         </div>

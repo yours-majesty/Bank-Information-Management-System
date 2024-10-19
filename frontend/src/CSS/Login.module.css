@@ -17,13 +17,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60%;
+  height: 55%;
   width: 30%;
   border-radius: 10px;
-  border: 1px solid #5b21b6;
+  
 
 }
-.loginForm form{
+.loginForm .form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,13 +33,12 @@
   height: 70%;
 }
 
-.loginForm input{
+.loginForm .input{
   width: 90%;
   height: 18%;
   outline: none;
-
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   font-size: 15px;
   
@@ -49,21 +48,23 @@
   font-family: 'Poppins';
   color: white;
 }
-.loginForm button{
+.loginForm .button{
   background-color: white;
-  color: #5b21b6;
-  height: 18%;
+  color: rgb(90, 89, 89);
+  height: 16%;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   border: none;
   width: 30%;
   font-family: 'Poppins';
 
 }
-
+.button:hover{
+  color: black;
+}
 .loginForm p{
   color: white;
-  font-weight: 600px;
+  font-weight: 800px;
 }

@@ -1,4 +1,4 @@
-.signup-container{
+.SignUpContainer{
     height: 100vh;
     width: 100vw;
     box-sizing: border-box;
@@ -8,19 +8,19 @@
     align-items: center;
 }
 
-.signup-form{
+.SignUpForm{
   background: linear-gradient(to right, #5b21b6, #0891b2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70%;
+  height: 75%;
   width: 30%;
   border-radius: 10px;
-  border: 1px solid #5b21b6;
+
 
 }
-.signup-form form{
+.SignUpForm .form1{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,26 +31,28 @@
   padding: 10px;
 }
 
-.signup-form input{
-  width: 75%;
-  height: 25%;
+.SignUpForm .input1{
+  width: 78%;
+  height: 15%;
   outline: none;
 
   padding: 8px 12px;
-  border-radius: 10px;
+  border-radius: 8px;
   border: none;
   font-size: 15px;
   
 }
 
-.signup-form h1{
-  
+.SignUpForm h1{
+  font-size: 25px;
+  font-family: "Poppins";
   color: white;
 }
-.signup-form button{
+.SignUpForm .button1{
   background-color: white;
   color: #5b21b6;
-  height: 30%;
+  height: 13%;
+  font-family: 'Poppins';
   border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
@@ -58,7 +60,7 @@
   border: none;
   width: 25%;
 }
-.signup-form p{
+.SignUpForm p{
   color: white;
   font-weight: 600px;
 }

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {toast} from 'react-toastify';
+import {ToastContainer,toast} from 'react-toastify';
 import {useState} from "react";
 import  styles from "../CSS/AddBank.module.css";
 
@@ -32,13 +32,13 @@ function AddBank() {
                     accountHolderName
                 },
                 {
-                    headers: {  // This is where you set the headers
+                    headers: {  
                         'Authorization': `Bearer ${token}`
                     }
                 }
             );
             if (response.data.success) {
-                toast.success(response.data.message || "Bank Account Successfully Added");
+                toast.success("Bank Account Successfully Added");
             }
         }catch(error){
             console.log("Error:",error);
@@ -85,6 +85,7 @@ function AddBank() {
 
                     <button type='submit' >Add Account</button>
                 </form>
+                <ToastContainer/>
             </div>
         </div>
       

@@ -1,8 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../CSS/SignUp.css"
+
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import styles from "../CSS/SignUp.module.css"
 
 function SignUp() {
   const [name, setName] = useState("");
@@ -34,11 +36,12 @@ function SignUp() {
 
   return (
     <div>
-      <div className="signup-container">
-        <div className="signup-form">
+      <div className={styles.SignUpContainer}>
+        <div className={styles.SignUpForm}>
             <h1>Sign Up</h1>
-          <form method="post" onSubmit={handleSubmit}>
+          <form className={styles.form1} method="post" onSubmit={handleSubmit}>
             <input
+            className={styles.input1}
               type="text"
               placeholder="name"
               value={name}
@@ -47,6 +50,7 @@ function SignUp() {
             />
 
             <input
+            className={styles.input1}
               type="text"
               placeholder="Username"
               value={username}
@@ -55,6 +59,7 @@ function SignUp() {
             />
 
             <input
+            className={styles.input1}
               type="email"
               placeholder="Email"
               value={email}
@@ -63,6 +68,7 @@ function SignUp() {
             />
 
             <input
+            className={styles.input1}
               type="password"
               placeholder="Password"
               value={password}
@@ -70,8 +76,11 @@ function SignUp() {
               required
             />
 
-            <button type="submit">Regiter</button>
+            <button className={styles.button1} type="submit">Regiter</button>
           </form>
+          <p>
+            Already have an account?<Link style={{color:"yellow",fontWeight:"700",fontFamily:"Poppins"}} to="/">Login In</Link>
+          </p>
         </div>
       </div>
     </div>
