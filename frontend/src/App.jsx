@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <AuthProvider> 
-        <Router>
+        
           <Navbar />
           <Routes>
             <Route path="/" element={<Login />} />
@@ -21,7 +21,7 @@ function App() {
             <Route path="/addAccount" element={<AddBank />} />
             <Route path="/bankAccounts" element={<BankAccount />} />
           </Routes>
-        </Router>
+       
         <ToastContainer />
       </AuthProvider>
     </>
