@@ -25,7 +25,7 @@ function Login() {
         setToken(usertoken);
         localStorage.setItem("token", usertoken);
         toast.success(response.data.message);
-        window.location.href="/addAccount";
+        window.location.href="https://bank-information-management-system-application.vercel.app/addAccount";
       }
     
     } catch (error) {
