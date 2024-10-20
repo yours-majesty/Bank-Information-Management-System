@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {ToastContainer,toast} from 'react-toastify';
+import {toast} from 'react-toastify';
 import {useState} from "react";
 import  styles from "../CSS/AddBank.module.css";
 
@@ -88,7 +88,7 @@ function AddBank() {
 
                     <button type='submit' >Add Account</button>
                 </form>
-                <ToastContainer/>
+                
             </div>
         </div>
       

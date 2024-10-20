@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <AuthProvider> 
-        
+           <ToastContainer />
           <Navbar /> 
           <Routes>
             <Route path="/" element={<Login />} />
@@ -22,7 +22,7 @@ function App() {
             <Route path="/bankAccounts" element={<BankAccount />} /> 
           </Routes>
       
-        <ToastContainer />
+     
       </AuthProvider> 
     </>
   );

@@ -22,7 +22,7 @@ function Login() {
       });
 
       // Check if login was successful
-      if (response.data.success) {
+      if (response.data.success && response.data.token ) {
         const usertoken = response.data.token;
         login(usertoken);
         toast.success("Login Successful");
@@ -33,10 +33,13 @@ function Login() {
       }
 
     } catch (error) {
-      console.log("Error Occurred", error);
+     console.log("Error Occurred", error.response ? error.response.data : error);
+
       toast.error("Internal Server Error");
     }
   };
+  
+  
 
   return (
     <div>
