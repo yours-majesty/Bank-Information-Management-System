@@ -74,7 +74,7 @@
   }
   
   .logout-btn:hover {
-    background-color: #C0392B; /* Darker shade on hover */
+   color:blue;/* Darker shade on hover */
   }
   
   .login-btn {
@@ -85,6 +85,6 @@
   }
   
   .login-btn:hover {
-    background-color: #2980B9; /* Darker shade on hover */
+    color:blue; /* Darker shade on hover */
   }
   
